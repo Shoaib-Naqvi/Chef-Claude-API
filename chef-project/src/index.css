@@ -85,11 +85,28 @@ main {
   cursor: pointer;
 }
 
-.chef-form > button::before {
+.chef-form > button:not(.clear-ingredients)::before {
   content: "+";
   margin-right: 5px;
 }
-.loading-container{
+
+.chef-form > button:hover {
+  background-color: #141413dc;
+}
+
+.clear-ingredients {
+ font-family: Inter, sans-serif;
+  border-radius: 6px;
+  border: none;
+  background-color: #141413;
+  color: #fafaf8;
+  width: 120px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.loading-container {
   margin-top: 20px;
   background-color: #1f2937;
   color: #fafaf8;
@@ -97,14 +114,14 @@ main {
   border-radius: 6px;
   text-align: center;
 }
-.recipe-title{
+.recipe-title {
   margin-top: 20px;
   font-size: 1.5rem;
   font-weight: 700;
   color: #1f2937;
   letter-spacing: -0.02em;
 }
-.recipe-content{
+.recipe-content {
   margin-top: 5px;
   font-size: 1.125rem;
   font-weight: 400;

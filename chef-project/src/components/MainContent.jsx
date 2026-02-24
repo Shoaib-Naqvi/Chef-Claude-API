@@ -29,6 +29,10 @@ function MainContent() {
     setIngredients((prevIngredients) => [...prevIngredients, newIngredient]);
     event.currentTarget.reset();
   }
+  function clearIngredients() {
+    setIngredients([]);
+    setRecipe("");
+  }
 
   return (
     <main>
@@ -40,6 +44,13 @@ function MainContent() {
           name="ingredient"
         />
         <button>Add ingredient</button>
+        <button
+          type="button"
+          className="clear-ingredients"
+          onClick={clearIngredients}
+        >
+          Clear ingredients
+        </button>
       </form>
 
       {ingredients.length > 0 && (
